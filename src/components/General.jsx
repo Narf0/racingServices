@@ -94,7 +94,7 @@ function General() {
 	return (
 		<>
 			<div className='d-flex justify-content-center'>
-				<h1>Clasificacion General</h1>
+				<h1>Clasificación General</h1>
 			</div>
 			<table className='table table-striped'>
 				<thead>
@@ -110,7 +110,7 @@ function General() {
 					{general.map((corredor, key) => {
 						contador = contador + 1;
 						return (
-							<tr>
+							<tr key={key}>
 								<th className='align-middle'>{`${key + 1}`}</th>
 								<td className='align-middle'>
 									<img src={corredor.picture} />

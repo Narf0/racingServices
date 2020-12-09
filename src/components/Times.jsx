@@ -2,20 +2,22 @@ import React from "react";
 import data from "../data/drivers_karts.json";
 
 function Times() {
-	const listItems = data.map((item) => (
-		<>
-			<tr>
-				<td>
-					<img src={item.picture} />
-				</td>
-				<td className='align-middle'> {item.name}</td>
-				<td className='align-middle'> {item.age}</td>
-				<td className='align-middle'> {item.team}</td>
-				{item.races.map((race) => {
-					return <td className='align-middle'> {` ${race.time}`}</td>;
-				})}
-			</tr>
-		</>
+	const listItems = data.map((item, key) => (
+		<tr key={key}>
+			<td>
+				<img alt='corredorPicture' src={item.picture} />
+			</td>
+			<td className='align-middle'> {item.name}</td>
+			<td className='align-middle'> {item.age}</td>
+			<td className='align-middle'> {item.team}</td>
+			{item.races.map((race, index) => {
+				return (
+					<td key={index} className='align-middle'>
+						{` ${race.time}`}
+					</td>
+				);
+			})}
+		</tr>
 	));
 
 	return (
@@ -42,7 +44,7 @@ function Times() {
 							<th scope='col'>Carrera 9</th>
 							<th scope='col'>Carrera 10</th>
 						</tr>
-					</thead>{" "}
+					</thead>
 					<tbody>{listItems}</tbody>
 				</table>
 			</div>

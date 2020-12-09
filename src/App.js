@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Times from "./components/Times";
 import General from "./components/General";
-import Races2 from "./components/Races";
+import Races from "./components/Races";
 
 function App() {
 	return (
@@ -18,7 +18,7 @@ function App() {
 							<General />
 						</div>
 						<div className='carousel-item'>
-							<Races2 />
+							<Races />
 						</div>
 						<div className='carousel-item'>
 							<Times />
