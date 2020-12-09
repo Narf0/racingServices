@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Times from "./components/Times";
+import General from "./components/General";
+import Races2 from "./components/Races";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<main className='container-fluid'>
+				<div
+					id='carouselExampleControls'
+					className='carousel slide'
+					data-ride='carousel'
+					data-interval='8000'
+					data-pause='false'>
+					<div className='carousel-inner'>
+						<div className='carousel-item active'>
+							<General />
+						</div>
+						<div className='carousel-item'>
+							<Races2 />
+						</div>
+						<div className='carousel-item'>
+							<Times />
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	);
 }
 
 export default App;
